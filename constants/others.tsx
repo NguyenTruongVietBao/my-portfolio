@@ -37,11 +37,13 @@ export const SOCIAL_MEDIA = [
   {
     id: 1,
     name: 'Facebook',
+    href: 'https://www.facebook.com/ntvb.dev',
     icon: <Facebook className='w-6 h-6' />,
   },
   {
     id: 2,
     name: 'Instagram',
+    href: 'https://www.instagram.com/ntvb.dev',
     icon: <Instagram className='w-6 h-6' />,
   },
 ];

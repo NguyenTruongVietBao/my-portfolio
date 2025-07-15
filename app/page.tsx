@@ -7,7 +7,7 @@ import WorkExperienceSection from '@/components/layout/work-experience-section';
 
 export default function Home() {
   return (
-    <main className='min-h-screen pt-16'>
+    <main>
       <HeroSection />
       <ProjectSection />
       <SkillSection />
