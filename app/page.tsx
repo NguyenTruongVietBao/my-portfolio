@@ -24,8 +24,8 @@ export default function Home() {
       </div>
 
       <ProjectSection />
-      <SkillSection />
-      <WorkExperienceSection />
+      {/* <SkillSection />
+      <WorkExperienceSection /> */}
     </main>
   );
 }

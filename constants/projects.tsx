@@ -1,27 +1,59 @@
 export const PROJECTS = [
   {
-    title: 'E-commerce Platform',
-    description:
-      'Full-stack e-commerce with NextJS, TypeScript, and Stripe integration',
-    tech: ['NextJS', 'TypeScript', 'TailwindCSS', 'Stripe'],
-    image:
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop',
+    title: 'Prilab',
+    description: 'A Platform for sharing documents and find partners with AI',
+    tech: [
+      'Express.js',
+      'React.js',
+      'Socket.io',
+      'PayOS',
+      'Docker',
+      'JWT',
+      'MongoDB',
+    ],
+    image: '/images/prilab_image.png',
     delay: 0,
+    github: {
+      frontend: 'https://github.com/NguyenTruongVietBao/EXE201_client',
+      backend: 'https://github.com/NguyenTruongVietBao/EXE201_server',
+    },
+    period: 'May 2025 - Present',
+    role: 'Fullstack Developer',
+    teamSize: '01 (personal project)',
   },
   {
-    title: 'Task Management App',
-    description: 'Task management app with real-time collaboration',
-    tech: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-    image:
-      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop',
+    title: 'CampusMedix',
+    description:
+      'Cross-platform mobile app for health and event management at school.',
+    tech: [
+      'React Native',
+      'Expo',
+      'Zustand',
+      'Nativewind',
+      'JWT',
+      'Momo Wallet',
+    ],
+    image: '/images/food-order_image.png',
     delay: 200,
+    github: {
+      mobile: 'https://github.com/phglamm/WDP301-native',
+    },
+    period: 'Apr 2025 - Jul 2025',
+    role: 'Mobile Developer',
+    teamSize: '02',
   },
   {
-    title: 'Portfolio Website',
-    description: 'Personal portfolio with animations and 3D elements',
-    tech: ['NextJS', 'Framer Motion', 'Three.js', 'TailwindCSS'],
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
+    title: 'ProfitLinker',
+    description:
+      'Mordern website for KOL, KOC,... share affiliate link to get income.',
+    tech: ['React.js', 'Vite', 'Zustand', 'TailwindCSS', 'Docker', 'Vercel'],
+    image: '/images/profit-linker_image.png',
     delay: 400,
+    github: {
+      frontend: 'https://github.com/NguyenTruongVietBao/SWD392_client',
+    },
+    period: 'Aug 2024 - Dec 2024',
+    role: 'Frontend Developer',
+    teamSize: '01 (personal project)',
   },
 ];
