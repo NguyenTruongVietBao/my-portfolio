@@ -6,13 +6,12 @@ import { TextGenerateEffect } from '../ui/text-generate-effect';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
-import { BackgroundLines } from '../ui/background-lines';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const words = [
-  'Hi, I am Bao.',
-  'I am a software engineer and a bachelor of Information Technology at the FPT University, HCM City.',
+  'Hi, I am Viet Bao',
+  '- A software engineer and a bachelor of Information Technology at the FPT University, HCM City.',
 ];
 
 export default function HeroSection() {

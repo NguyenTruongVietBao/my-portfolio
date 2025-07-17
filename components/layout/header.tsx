@@ -125,7 +125,7 @@ export default function Header() {
             className='group px-6 py-3 bg-black text-[#fffaf0] rounded-full cursor-pointer font-semibold hover:bg-black/90 hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-2'
           >
             <MailIcon className='w-5 h-5 text-[#fffaf0] group-hover:animate-bounce' />
-            <span className='group-hover:animate-bounce'>Contact Now</span>
+            <span>Contact Now</span>
           </button>
         </div>
 
