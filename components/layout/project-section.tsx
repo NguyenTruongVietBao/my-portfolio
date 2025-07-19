@@ -194,7 +194,7 @@ export default function ProjectSection() {
               </div>
             ))}
           </div>
-          <div className='flex items-center justify-between mx-40 mt-10'>
+          <div className='flex items-center justify-between mx-40 mt-15'>
             <h2 className='text-3xl font-bold text-black'>Others Projects</h2>
             {/* View More Button */}
             <div className='text-center'>

@@ -106,12 +106,11 @@ export default function SkillSection() {
             ref={titleRef}
             className='text-4xl md:text-5xl font-bold text-black mb-4 relative inline-block'
           >
-            Kỹ Năng Của Tôi
+            Skills
             <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-black rounded-full'></div>
           </h2>
           <p className='text-lg text-black/70 max-w-2xl mx-auto mt-8'>
-            Những công nghệ và kỹ năng tôi thành thạo, được phát triển qua các
-            dự án thực tế
+            My skills, developed through real-world projects
           </p>
         </div>
 
