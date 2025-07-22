@@ -4,6 +4,7 @@ import HeroSection from '@/components/layout/hero-section';
 import ProjectSection from '@/components/layout/project-section';
 import SkillSection from '@/components/layout/skill-section';
 import WorkExperienceSection from '@/components/layout/work-experience-section';
+import { Particles } from '@/components/magicui/particles';
 import { cn } from '@/lib/utils';
 
 export default function Home() {
@@ -21,11 +22,18 @@ export default function Home() {
         {/* Radial gradient for the container to give a faded look */}
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center bg-[#fffaf0] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black'></div>
         <HeroSection />
+        {/* <Particles
+          className='absolute inset-0 z-0'
+          quantity={200}
+          ease={80}
+          color='#000'
+          refresh
+        /> */}
       </div>
 
       <ProjectSection />
       <SkillSection />
-      {/* <WorkExperienceSection /> */}
+      <WorkExperienceSection />
     </main>
   );
 }

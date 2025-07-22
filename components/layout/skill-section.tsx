@@ -119,7 +119,7 @@ export default function SkillSection() {
           {/* Linear Progress Skills */}
           <div className='space-y-8'>
             <h3 className='text-2xl font-bold text-black mb-6 text-center'>
-              Kỹ Năng Chính
+              Main skills
             </h3>
             {SKILLS.map((skill, index) => (
               <SkillBarItem key={skill.name} skill={skill} index={index} />
@@ -129,7 +129,7 @@ export default function SkillSection() {
           {/* Circular Progress Skills */}
           <div className='grid grid-cols-2 gap-8'>
             <h3 className='col-span-2 text-2xl font-bold text-black mb-6 text-center'>
-              Thành Thạo
+              Advanced skills
             </h3>
             {SKILLS.map((skill, index) => (
               <SkillCircleItem key={skill.name} skill={skill} index={index} />
@@ -139,7 +139,7 @@ export default function SkillSection() {
 
         {/* Additional Skills */}
         <div className='mt-20 text-center'>
-          <h3 className='text-2xl font-bold text-black mb-8'>Công Nghệ Khác</h3>
+          <h3 className='text-2xl font-bold text-black mb-8'>Other skills</h3>
           <div className='flex flex-wrap justify-center gap-4'>
             {[
               'Git',

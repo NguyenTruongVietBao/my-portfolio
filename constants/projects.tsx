@@ -22,17 +22,10 @@ export const PROJECTS = [
     teamSize: '01 (personal project)',
   },
   {
-    title: 'CampusMedix',
+    title: 'Food Order',
     description:
       'Cross-platform mobile app for health and event management at school.',
-    tech: [
-      'React Native',
-      'Expo',
-      'Zustand',
-      'Nativewind',
-      'JWT',
-      'Momo Wallet',
-    ],
+    tech: ['Expo', 'Appwrite', 'Zustand', 'Nativewind', 'Sentry'],
     image: '/images/food-order_image.png',
     delay: 200,
     github: {

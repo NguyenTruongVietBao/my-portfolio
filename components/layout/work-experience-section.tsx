@@ -6,6 +6,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Calendar, MapPin, ExternalLink, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { BoxReveal } from '../magicui/box-reveal';
+import { Button } from '../ui/button';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,7 +15,9 @@ export default function WorkExperienceSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
-
+  const handleContact = () => {
+    window.location.href = 'mailto:nguyentvbao.dev@gmail.com';
+  };
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
@@ -99,12 +103,11 @@ export default function WorkExperienceSection() {
             ref={titleRef}
             className='text-4xl md:text-5xl font-bold text-black mb-4 relative inline-block'
           >
-            Kinh Nghiệm Làm Việc
+            Work Experience
             <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-black rounded-full'></div>
           </h2>
           <p className='text-lg text-black/70 max-w-2xl mx-auto mt-8'>
-            Hành trình phát triển sự nghiệp của tôi qua các vị trí và dự án khác
-            nhau
+            My journey through different positions and projects
           </p>
         </div>
 
@@ -132,15 +135,15 @@ export default function WorkExperienceSection() {
         {/* Call to Action */}
         <div className='text-center mt-20'>
           <div className='bg-black/5 rounded-2xl p-8 max-w-2xl mx-auto'>
-            <h3 className='text-2xl font-bold text-black mb-4'>
-              Sẵn Sàng Hợp Tác
+            <p className='text-black/70'>Get In Touch</p>
+            <h3 className='text-3xl font-bold text-black my-4'>
+              Ready to Collaborate
             </h3>
-            <p className='text-black/70 mb-6'>
-              Tôi luôn tìm kiếm những cơ hội mới để phát triển và đóng góp vào
-              các dự án thú vị
-            </p>
-            <button className='group px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 mx-auto hover:scale-105 hover:shadow-xl'>
-              <span>Liên Hệ Ngay</span>
+            <button
+              onClick={handleContact}
+              className='mt-10 cursor-pointer group px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 mx-auto hover:scale-105 hover:shadow-xl'
+            >
+              <span>Contact Now</span>
               <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
             </button>
           </div>
@@ -202,7 +205,7 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('vi-VN', {
-      month: 'short',
+      month: 'numeric',
       year: 'numeric',
     });
   };
@@ -224,73 +227,74 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
           ref={cardRef}
           className='bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-black/10'
         >
-          {/* Company Header */}
-          <div className='flex items-center gap-4 mb-4'>
-            <div className='relative w-12 h-12 rounded-full overflow-hidden bg-black/10'>
-              <Image
-                src={experience.logo}
-                alt={experience.company}
-                fill
-                className='object-cover'
-              />
-            </div>
-            <div>
-              <h3 className='text-xl font-bold text-black'>
-                {experience.company}
-              </h3>
-              <p className='text-black/70 font-semibold'>
-                {experience.position}
-              </p>
-            </div>
-          </div>
-
-          {/* Date and Location */}
-          <div className='flex items-center gap-4 mb-4 text-sm text-black/60'>
-            <div className='flex items-center gap-1'>
-              <Calendar className='w-4 h-4' />
-              <span>
-                {formatDate(experience.startDate)} -{' '}
-                {formatDate(experience.endDate)}
-              </span>
-            </div>
-            <div className='flex items-center gap-1'>
-              <MapPin className='w-4 h-4' />
-              <span>{experience.location}</span>
-            </div>
-          </div>
-
-          {/* Description */}
-          <p className='text-black/80 mb-4 leading-relaxed'>
-            {experience.description}
-          </p>
-
-          {/* Tech Stack */}
-          <div className='flex flex-wrap gap-2 mb-4'>
-            {experience.tech.slice(0, 4).map((tech) => (
-              <span
-                key={tech}
-                className='px-3 py-1 bg-black/10 text-black text-sm rounded-full'
-              >
-                {tech}
-              </span>
-            ))}
-            {experience.tech.length > 4 && (
-              <span className='px-3 py-1 bg-black/10 text-black text-sm rounded-full'>
-                +{experience.tech.length - 4} more
-              </span>
-            )}
-          </div>
-
           {/* View Company Button */}
-          <a
-            href={experience.link}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='inline-flex items-center gap-2 text-black hover:text-black/70 font-semibold transition-colors group'
-          >
-            <span>Xem Công Ty</span>
-            <ExternalLink className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
-          </a>
+          <div className='size-full max-w-lg items-center justify-center overflow-hidden'>
+            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+              <p className='text-[3.5rem] font-semibold'>
+                CEH<span className='text-[#5046e6]'>.</span>
+              </p>
+            </BoxReveal>
+            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+              <h2 className='font-bold'>
+                <span className='text-[#000]'>Frontend Developer</span>
+              </h2>
+            </BoxReveal>
+            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+              {/* Date and Location */}
+              <div className='flex items-center gap-4 mt-4 text-sm text-black/60'>
+                <div className='flex items-center gap-1'>
+                  <Calendar className='w-4 h-4' />
+                  <span>
+                    {formatDate(experience.startDate)} -{' '}
+                    {formatDate(experience.endDate)}
+                  </span>
+                </div>
+                <div className='flex items-center gap-1'>
+                  <MapPin className='w-4 h-4' />
+                  <span>{experience.location}</span>
+                </div>
+              </div>
+            </BoxReveal>
+            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+              <div className='mt-6'>
+                <p>
+                  -&gt; 20+ free and open-source animated components built with
+                  <span className='font-semibold text-[#000]'>React</span>,
+                  <span className='font-semibold text-[#000]'>Typescript</span>,
+                  <span className='font-semibold text-[#000]'>
+                    Tailwind CSS
+                  </span>
+                  , and
+                  <span className='font-semibold text-[#000]'>Motion</span>
+                  . <br />
+                  -&gt; 100% open-source, and customizable. <br />
+                </p>
+              </div>
+            </BoxReveal>
+            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+              {/* Tech Stack */}
+              <div className='flex flex-wrap gap-2 mt-4'>
+                {experience.tech.slice(0, 4).map((tech) => (
+                  <span
+                    key={tech}
+                    className='px-3 py-1 bg-black/10 text-black text-sm rounded-full'
+                  >
+                    {tech}
+                  </span>
+                ))}
+                {experience.tech.length > 4 && (
+                  <span className='px-3 py-1 bg-black/10 text-black text-sm rounded-full'>
+                    +{experience.tech.length - 4} more
+                  </span>
+                )}
+              </div>
+            </BoxReveal>
+            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+              <Button className='mt-[1.6rem] bg-[#000] text-[#fffaf0]'>
+                Explore
+              </Button>
+            </BoxReveal>
+          </div>
         </div>
       </div>
 

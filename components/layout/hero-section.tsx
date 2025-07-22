@@ -6,6 +6,8 @@ import { TextGenerateEffect } from '../ui/text-generate-effect';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { TypingAnimation } from '../magicui/typing-animation';
+import { MorphingText } from '../magicui/morphing-text';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -115,7 +117,6 @@ export default function HeroSection() {
             className='text-lg md:text-xl text-black/80'
           />
         </div>
-
         {/* CTA Buttons */}
         <div ref={ctaRef} className='flex flex-col sm:flex-row gap-4 mb-12'>
           <button
@@ -123,14 +124,14 @@ export default function HeroSection() {
             className='cursor-pointer group px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 hover:scale-105 hover:shadow-xl'
           >
             <Download className='w-5 h-5 group-hover:animate-bounce' />
-            <span>Tải CV</span>
+            <span>Download CV</span>
           </button>
 
           <button
             onClick={handleScrollToProjects}
             className='cursor-pointer group px-8 py-4 border-2 border-black text-black rounded-full font-semibold hover:bg-black hover:text-[#fffaf0] transition-all duration-300 flex items-center gap-3 hover:scale-105'
           >
-            <span>Xem Dự Án</span>
+            <span>View Projects</span>
             <ChevronDown className='w-5 h-5 group-hover:animate-bounce' />
           </button>
         </div>
@@ -169,7 +170,7 @@ export default function HeroSection() {
           className='absolute bottom-14 left-1/2 transform -translate-x-1/2'
         >
           <div className='flex flex-col items-center gap-2 text-black/60'>
-            <span className='text-sm font-medium'>Cuộn xuống</span>
+            <span className='text-sm font-medium'>Scroll down</span>
             <ChevronDown className='w-6 h-6 animate-bounce' />
           </div>
         </div>

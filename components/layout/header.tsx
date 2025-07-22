@@ -91,7 +91,7 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className={`w-full h-20 flex justify-between items-center px-6 md:px-12 fixed top-0 left-0 z-50 transition-all duration-500 ${
+        className={`w-full h-20 flex justify-between items-center px-6 md:px-28 fixed top-0 left-0 z-50 transition-all duration-500 ${
           isScrolled
             ? 'bg-transparent backdrop-blur-xs border-b border-black/10 shadow-lg'
             : 'bg-transparent'

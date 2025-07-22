@@ -22,6 +22,8 @@ import {
   SiExpo,
   SiVercel,
   SiJsonwebtokens,
+  SiAppwrite,
+  SiSentry,
 } from 'react-icons/si';
 import Image from 'next/image';
 
@@ -45,6 +47,8 @@ const techIcons: { [key: string]: React.ReactNode } = {
   Vercel: <SiVercel size={16} />,
   NextJS: <RiNextjsLine size={16} />,
   TypeScript: <TbBrandTypescript size={16} />,
+  Appwrite: <SiAppwrite size={16} />,
+  Sentry: <SiSentry size={16} />,
 };
 
 export default function ProjectSection() {
@@ -194,15 +198,17 @@ export default function ProjectSection() {
               </div>
             ))}
           </div>
-          <div className='flex items-center justify-between mx-40 mt-15'>
+          <div className='flex items-center justify-between mx-40 mt-24'>
             <h2 className='text-3xl font-bold text-black'>Others Projects</h2>
-            {/* View More Button */}
-            <div className='text-center'>
-              <button className='group cursor-pointer px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 mx-auto hover:scale-105 hover:shadow-xl'>
+            {/* <div className='text-center'>
+              <button
+                onClick={() => window.open('https://github.com/ntvb.dev')}
+                className='group cursor-pointer px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 mx-auto hover:scale-105 hover:shadow-xl'
+              >
                 <span>View All</span>
                 <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform text-[#fffaf0]' />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 

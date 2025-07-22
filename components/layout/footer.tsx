@@ -117,19 +117,19 @@ export default function Footer() {
               <div className='w-2 h-2 bg-[#fffaf0] rounded-full animate-pulse'></div>
             </div>
             <p className='text-[#fffaf0]/80 text-lg leading-relaxed'>
-              Frontend Developer đam mê tạo ra những trải nghiệm web tuyệt vời
+              Developer passionate about creating amazing web experiences
             </p>
             <div className='flex items-center gap-2 text-[#fffaf0]/60'>
-              <span>Made with</span>
+              <span>Made by</span>
               <Heart className='w-4 h-4 text-red-500 animate-pulse' />
-              <span>in Vietnam</span>
+              <span>Nguyễn Trương Viết Bảo</span>
             </div>
           </div>
 
           {/* Social Links */}
           <div className='space-y-4'>
             <h3 className='text-xl font-bold text-[#fffaf0] mb-6'>
-              Kết Nối Với Tôi
+              Connect With Me
             </h3>
             <div className='space-y-3'>
               {socialLinks.map((social) => (
@@ -151,7 +151,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className='space-y-4'>
-            <h3 className='text-xl font-bold text-[#fffaf0] mb-6'>Liên Hệ</h3>
+            <h3 className='text-xl font-bold text-[#fffaf0] mb-6'>Contact</h3>
             <div className='space-y-3'>
               {contactInfo.map((contact, index) => (
                 <div key={index} className='flex items-center gap-3'>
