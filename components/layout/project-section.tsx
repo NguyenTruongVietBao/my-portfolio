@@ -204,15 +204,6 @@ export default function ProjectSection() {
           </div>
           <div className='flex items-center justify-between mx-40 mt-24'>
             <h2 className='text-3xl font-bold text-black'>Others Projects</h2>
-            {/* <div className='text-center'>
-              <button
-                onClick={() => window.open('https://github.com/ntvb.dev')}
-                className='group cursor-pointer px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 mx-auto hover:scale-105 hover:shadow-xl'
-              >
-                <span>View All</span>
-                <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform text-[#fffaf0]' />
-              </button>
-            </div> */}
           </div>
         </div>
 

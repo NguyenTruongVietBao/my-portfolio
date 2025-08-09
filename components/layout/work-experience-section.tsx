@@ -85,16 +85,16 @@ export default function WorkExperienceSection() {
     <section
       id='experience'
       ref={sectionRef}
-      className='w-full min-h-screen py-20 bg-[#fffaf0] relative overflow-hidden'
+      className='w-full min-h-screen py-16 sm:py-20 bg-[#fffaf0] relative overflow-hidden'
     >
       {/* Background Pattern */}
-      <div className='absolute inset-0 opacity-5'>
+      <div className='absolute inset-0 opacity-5 hidden md:block'>
         <div className='absolute top-1/4 left-1/4 w-64 h-64 border border-black rounded-full'></div>
         <div className='absolute bottom-1/3 right-1/4 w-48 h-48 border border-black rounded-full'></div>
         <div className='absolute top-1/2 right-1/3 w-32 h-32 border border-black rounded-full'></div>
       </div>
 
-      <div className='max-w-6xl mx-auto px-6 md:px-12 relative z-10'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 md:px-12 relative z-10'>
         {/* Section Title */}
         <motion.div
           className='text-center mb-16'
@@ -103,7 +103,7 @@ export default function WorkExperienceSection() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           viewport={{ once: true }}
         >
-          <motion.h2 className='text-4xl md:text-5xl font-bold text-black relative inline-block'>
+          <motion.h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-black relative inline-block'>
             Work Experiences
             <motion.div
               initial={{ width: 0 }}
@@ -118,7 +118,7 @@ export default function WorkExperienceSection() {
         <div ref={timelineRef} className='relative'>
           {/* Timeline Line */}
           <div
-            className='absolute left-1/2 transform -translate-x-1/2 w-1 bg-black/20 timeline-line'
+            className='absolute left-1/2 transform -translate-x-1/2 w-[2px] bg-black/20 timeline-line hidden md:block'
             style={{ height: '100%' }}
           ></div>
 
@@ -198,36 +198,40 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
 
   return (
     <div
-      className={`experience-item relative flex items-center ${
-        isLeft ? 'flex-row' : 'flex-row-reverse'
+      className={`experience-item relative flex items-start md:items-center flex-col ${
+        isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
     >
       {/* Timeline Dot */}
-      <div className='absolute left-1/2 transform -translate-x-1/2 z-10'>
+      <div className='absolute left-1/2 transform -translate-x-1/2 z-10 hidden md:block'>
         <div className='timeline-dot w-4 h-4 bg-black rounded-full border-4 border-[#fffaf0] shadow-lg'></div>
       </div>
 
       {/* Content */}
-      <div className={`w-5/12 ${isLeft ? 'pr-8' : 'pl-8'}`}>
+      <div
+        className={`w-full md:w-5/12 ${
+          isLeft ? 'md:pr-8' : 'md:pl-8'
+        } mb-6 md:mb-0`}
+      >
         <div
           ref={cardRef}
-          className='bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-black/10'
+          className='bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-5 sm:p-6 border border-black/10'
         >
           {/* View Company Button */}
           <div className='size-full max-w-lg items-center justify-center overflow-hidden'>
             <BoxReveal boxColor={'#000'} duration={0.5}>
-              <p className='text-[3.5rem] font-semibold'>
+              <p className='text-[2.25rem] sm:text-[3rem] md:text-[3.5rem] font-semibold'>
                 CEH<span className='text-[#5046e6]'>.</span>
               </p>
             </BoxReveal>
             <BoxReveal boxColor={'#000'} duration={0.5}>
-              <h2 className='font-bold'>
+              <h2 className='font-bold text-lg sm:text-xl md:text-2xl'>
                 <span className='text-[#000]'>Frontend Developer</span>
               </h2>
             </BoxReveal>
             <BoxReveal boxColor={'#000'} duration={0.5}>
               {/* Date and Location */}
-              <div className='flex items-center gap-4 mt-4 text-sm text-black/60'>
+              <div className='flex flex-wrap items-center gap-3 sm:gap-4 mt-4 text-sm text-black/60'>
                 <div className='flex items-center gap-1'>
                   <Calendar className='w-4 h-4' />
                   <span>
@@ -261,13 +265,13 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
                 {experience.tech.slice(0, 4).map((tech) => (
                   <span
                     key={tech}
-                    className='px-3 py-1 bg-black/10 text-black text-sm rounded-full'
+                    className='px-3 py-1 bg-black/10 text-black text-xs sm:text-sm rounded-full'
                   >
                     {tech}
                   </span>
                 ))}
                 {experience.tech.length > 4 && (
-                  <span className='px-3 py-1 bg-black/10 text-black text-sm rounded-full'>
+                  <span className='px-3 py-1 bg-black/10 text-black text-xs sm:text-sm rounded-full'>
                     +{experience.tech.length - 4} more
                   </span>
                 )}
@@ -278,7 +282,7 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
       </div>
 
       {/* Empty space for opposite side */}
-      <div className='w-5/12'></div>
+      <div className='hidden md:block w-5/12'></div>
     </div>
   );
 }
