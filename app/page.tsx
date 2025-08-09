@@ -1,11 +1,13 @@
 'use client';
 
+import AboutSection from '@/components/layout/about-section';
+import GetInTouchSection from '@/components/layout/get-in-touch-section';
 import HeroSection from '@/components/layout/hero-section';
 import ProjectSection from '@/components/layout/project-section';
 import SkillSection from '@/components/layout/skill-section';
 import WorkExperienceSection from '@/components/layout/work-experience-section';
-import { Particles } from '@/components/magicui/particles';
 import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -19,21 +21,13 @@ export default function Home() {
             'dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]'
           )}
         />
-        {/* Radial gradient for the container to give a faded look */}
-        <div className='pointer-events-none absolute inset-0 flex items-center justify-center bg-[#fffaf0] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black'></div>
         <HeroSection />
-        {/* <Particles
-          className='absolute inset-0 z-0'
-          quantity={200}
-          ease={80}
-          color='#000'
-          refresh
-        /> */}
       </div>
-
+      <AboutSection />
       <ProjectSection />
       <SkillSection />
       <WorkExperienceSection />
+      <GetInTouchSection />
     </main>
   );
 }

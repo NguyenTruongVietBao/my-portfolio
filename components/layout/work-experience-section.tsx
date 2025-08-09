@@ -4,10 +4,10 @@ import React, { useEffect, useRef } from 'react';
 import { WORK_EXPERIENCES } from '@/constants/work-experiences';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Calendar, MapPin, ExternalLink, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import { Calendar, MapPin } from 'lucide-react';
 import { BoxReveal } from '../magicui/box-reveal';
 import { Button } from '../ui/button';
+import { motion } from 'motion/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,9 +15,7 @@ export default function WorkExperienceSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
-  const handleContact = () => {
-    window.location.href = 'mailto:nguyentvbao.dev@gmail.com';
-  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Title animation
@@ -98,18 +96,23 @@ export default function WorkExperienceSection() {
 
       <div className='max-w-6xl mx-auto px-6 md:px-12 relative z-10'>
         {/* Section Title */}
-        <div className='text-center mb-16'>
-          <h2
-            ref={titleRef}
-            className='text-4xl md:text-5xl font-bold text-black mb-4 relative inline-block'
-          >
-            Work Experience
-            <div className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-black rounded-full'></div>
-          </h2>
-          <p className='text-lg text-black/70 max-w-2xl mx-auto mt-8'>
-            My journey through different positions and projects
-          </p>
-        </div>
+        <motion.div
+          className='text-center mb-16'
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+        >
+          <motion.h2 className='text-4xl md:text-5xl font-bold text-black relative inline-block'>
+            Work Experiences
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: '100%' }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className='absolute -bottom-4 left-1/2 transform -translate-x-1/2 h-1 bg-black rounded-full'
+            />
+          </motion.h2>
+        </motion.div>
 
         {/* Timeline */}
         <div ref={timelineRef} className='relative'>
@@ -129,23 +132,6 @@ export default function WorkExperienceSection() {
                 isLeft={index % 2 === 0}
               />
             ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className='text-center mt-20'>
-          <div className='bg-black/5 rounded-2xl p-8 max-w-2xl mx-auto'>
-            <p className='text-black/70'>Get In Touch</p>
-            <h3 className='text-3xl font-bold text-black my-4'>
-              Ready to Collaborate
-            </h3>
-            <button
-              onClick={handleContact}
-              className='mt-10 cursor-pointer group px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 mx-auto hover:scale-105 hover:shadow-xl'
-            >
-              <span>Contact Now</span>
-              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-            </button>
           </div>
         </div>
       </div>
@@ -229,17 +215,17 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
         >
           {/* View Company Button */}
           <div className='size-full max-w-lg items-center justify-center overflow-hidden'>
-            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+            <BoxReveal boxColor={'#000'} duration={0.5}>
               <p className='text-[3.5rem] font-semibold'>
                 CEH<span className='text-[#5046e6]'>.</span>
               </p>
             </BoxReveal>
-            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+            <BoxReveal boxColor={'#000'} duration={0.5}>
               <h2 className='font-bold'>
                 <span className='text-[#000]'>Frontend Developer</span>
               </h2>
             </BoxReveal>
-            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+            <BoxReveal boxColor={'#000'} duration={0.5}>
               {/* Date and Location */}
               <div className='flex items-center gap-4 mt-4 text-sm text-black/60'>
                 <div className='flex items-center gap-1'>
@@ -255,23 +241,21 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
                 </div>
               </div>
             </BoxReveal>
-            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+            <BoxReveal boxColor={'#000'} duration={0.5}>
               <div className='mt-6'>
                 <p>
-                  -&gt; 20+ free and open-source animated components built with
-                  <span className='font-semibold text-[#000]'>React</span>,
-                  <span className='font-semibold text-[#000]'>Typescript</span>,
+                  -&gt; Redesigned UI/UX improving user task efficiency by ~35%
+                  <br />
+                  -&gt; Developed responsive interfaces in{' '}
                   <span className='font-semibold text-[#000]'>
-                    Tailwind CSS
-                  </span>
-                  , and
-                  <span className='font-semibold text-[#000]'>Motion</span>
-                  . <br />
-                  -&gt; 100% open-source, and customizable. <br />
+                    React.js
+                  </span> +{' '}
+                  <span className='font-semibold text-[#000]'>Bootstrap 4</span>
+                  , reducing cross-device layout bugs by 50%. <br />
                 </p>
               </div>
             </BoxReveal>
-            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
+            <BoxReveal boxColor={'#000'} duration={0.5}>
               {/* Tech Stack */}
               <div className='flex flex-wrap gap-2 mt-4'>
                 {experience.tech.slice(0, 4).map((tech) => (
@@ -288,11 +272,6 @@ function ExperienceItem({ experience, index, isLeft }: ExperienceItemProps) {
                   </span>
                 )}
               </div>
-            </BoxReveal>
-            <BoxReveal boxColor={'#fffaf0'} duration={0.5}>
-              <Button className='mt-[1.6rem] bg-[#000] text-[#fffaf0]'>
-                Explore
-              </Button>
             </BoxReveal>
           </div>
         </div>

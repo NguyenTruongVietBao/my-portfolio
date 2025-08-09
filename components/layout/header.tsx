@@ -98,7 +98,11 @@ export default function Header() {
         }`}
       >
         {/* Logo */}
-        <div ref={logoRef} className='flex items-center'>
+        <div
+          ref={logoRef}
+          className='flex items-center'
+          onClick={() => handleNavClick('#hero')}
+        >
           <div className='text-2xl font-bold text-black cursor-pointer hover:scale-105 transition-transform duration-300'>
             nt.vbao
           </div>

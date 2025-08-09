@@ -5,7 +5,14 @@ import { TextHoverEffect } from '../ui/text-hover-effect';
 import { TextGenerateEffect } from '../ui/text-generate-effect';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
+import {
+  ChevronDown,
+  Download,
+  Facebook,
+  Github,
+  Linkedin,
+  Mail,
+} from 'lucide-react';
 import { TypingAnimation } from '../magicui/typing-animation';
 import { MorphingText } from '../magicui/morphing-text';
 
@@ -93,7 +100,8 @@ export default function HeroSection() {
   }, []);
 
   const handleDownloadCV = () => {
-    console.log('Downloading CV...');
+    const cvPath = '/cv-ung-tuyen-ntvbao.pdf';
+    window.open(cvPath, '_blank');
   };
 
   const handleScrollToProjects = () => {
@@ -105,13 +113,13 @@ export default function HeroSection() {
     <section id='hero' className='w-full h-screen'>
       <div
         ref={heroRef}
-        className='relative z-10 flex flex-col items-center justify-center h-full px-6 md:px-12 mt-10'
+        className='relative z-10 flex flex-col items-center justify-center h-full px-6 md:px-12 mt-12'
       >
         {/* Title */}
         <TextHoverEffect text='nt.vbao' />
 
         {/* Subtitle */}
-        <div ref={subtitleRef} className='max-w-4xl text-center mb-12'>
+        <div ref={subtitleRef} className='max-w-4xl text-center mb-15'>
           <TextGenerateEffect
             words={words.join(' ')}
             className='text-lg md:text-xl text-black/80'
@@ -124,7 +132,7 @@ export default function HeroSection() {
             className='cursor-pointer group px-8 py-4 bg-black text-[#fffaf0] rounded-full font-semibold hover:bg-black/90 transition-all duration-300 flex items-center gap-3 hover:scale-105 hover:shadow-xl'
           >
             <Download className='w-5 h-5 group-hover:animate-bounce' />
-            <span>Download CV</span>
+            <span>My Resume</span>
           </button>
 
           <button
@@ -153,6 +161,14 @@ export default function HeroSection() {
             className='p-3 bg-black/10 hover:bg-black hover:text-[#fffaf0] text-black rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg'
           >
             <Linkedin className='w-6 h-6' />
+          </a>
+          <a
+            href='https://www.linkedin.com/in/ntvb.dev'
+            rel='noopener noreferrer'
+            target='_blank'
+            className='p-3 bg-black/10 hover:bg-black hover:text-[#fffaf0] text-black rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg'
+          >
+            <Facebook className='w-6 h-6' />
           </a>
           <a
             href='mailto:nguyentvbao.dev@gmail.com'

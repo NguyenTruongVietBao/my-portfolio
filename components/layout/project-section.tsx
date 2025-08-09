@@ -26,6 +26,7 @@ import {
   SiSentry,
 } from 'react-icons/si';
 import Image from 'next/image';
+import { motion } from 'motion/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,21 +117,24 @@ export default function ProjectSection() {
       </div>
 
       <div className='mx-auto'>
-        {/* Section Title */}
-        <div className='text-center'>
-          <h2
-            ref={titleRef}
-            className='text-4xl md:text-5xl font-bold text-black mb-4 relative inline-block'
-          >
+        {/* Header */}
+        <motion.div
+          className='text-center mb-16'
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+        >
+          <motion.h2 className='text-4xl md:text-5xl font-bold text-black relative inline-block'>
             My Projects
-            <div className='absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-2/3 h-1 bg-black rounded-full'></div>
-          </h2>
-          <p className='text-lg text-black/70 max-w-2xl mx-auto mt-8'>
-            My projects with passion and dedication, using the latest
-            technologies
-          </p>
-        </div>
-
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: '100%' }}
+              transition={{ duration: 1, delay: 0.5 }}
+              className='absolute -bottom-4 left-1/2 transform -translate-x-1/2 h-1 bg-black rounded-full'
+            />
+          </motion.h2>
+        </motion.div>
         {/* Projects Grid */}
         <div ref={cardsRef}>
           <div className='flex justify-center gap-4 mx-20'>
