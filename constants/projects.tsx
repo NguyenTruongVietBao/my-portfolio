@@ -1,0 +1,67 @@
+export const PROJECTS = [
+  {
+    title: 'Urban Lens',
+    description: 'Social media platform for Travelers',
+    tech: [
+      'React Native',
+      'Expo',
+      'Google Map API',
+      'Zustand',
+      'Tanstack Query',
+      'FCM',
+      'Nativewind',
+    ],
+    image: '/images/mathcha-edu_image.png', // Placeholder - cần thay bằng ảnh Urban Lens
+    delay: 0,
+    github: {
+      mobile: 'https://github.com/NguyenTruongVietBao',
+    },
+    period: 'Aug 2025 - Nov 2025',
+    role: 'Mobile Developer',
+    teamSize: 'Personal Project',
+  },
+  {
+    title: 'Prilab',
+    description: 'E-commerce platform for selling products',
+    tech: [
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'React.js',
+      'Socket.io',
+      'Docker',
+      'PayOS',
+      'Cloudinary',
+    ],
+    image: '/images/prilab_image.png',
+    delay: 200,
+    github: {
+      frontend: 'https://github.com/NguyenTruongVietBao/EXE201_client',
+      backend: 'https://github.com/NguyenTruongVietBao/EXE201_server',
+    },
+    period: 'Apr 2025 - Aug 2025',
+    role: 'Fullstack Developer',
+    teamSize: 'Personal Project',
+  },
+  {
+    title: 'Campus Medix',
+    description: 'School health management platform for elementary schools',
+    tech: [
+      'Expo',
+      'Zustand',
+      'Nativewind',
+      'Expo Secure Store',
+      'FCM',
+      'Expo Camera',
+      'MoMo E-wallet',
+    ],
+    image: '/images/food-order_image.png',
+    delay: 400,
+    github: {
+      mobile: 'https://github.com/NguyenTruongVietBao',
+    },
+    period: 'Apr 2025 - Aug 2025',
+    role: 'Mobile Developer',
+    teamSize: 'Personal Project',
+  },
+];
