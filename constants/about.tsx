@@ -11,7 +11,7 @@ export const ABOUT = {
   github: 'https://github.com/NguyenTruongVietBao',
   facebook: 'https://www.facebook.com/nguyentruongvietbao/',
   portfolio: 'http://nguyentvbao.site',
-  roles: ['Fullstack Developer', 'Frontend Developer', 'Mobile Developer'],
+  roles: ['Fullstack Developer', 'Mobile Developer'],
   education: {
     university: 'FPT University',
     degree: 'Bachelor of Software Engineering',
@@ -37,7 +37,7 @@ export const ABOUT = {
   },
   code: {
     project: 15,
-    experience: 3,
+    experience: 2,
     skill: 20,
     happy: 100,
   },

@@ -1,20 +1,10 @@
-import {
-  Code,
-  Database,
-  Palette,
-  Server,
-  Smartphone,
-  Settings,
-  GitBranch,
-  Shield,
-  Brain,
-} from 'lucide-react';
+import { Brain, Code, Database, Palette, Server, Settings, Smartphone } from 'lucide-react';
 
 export const SKILLS = [
   {
     name: 'React & Next.js',
     percentage: 95,
-    icon: <Code className='w-6 h-6' />,
+    icon: <Code className="w-6 h-6" />,
     category: 'Frontend',
     technologies: [
       'React.js',
@@ -27,64 +17,30 @@ export const SKILLS = [
     ],
   },
   {
-    name: 'TypeScript & JavaScript',
-    percentage: 92,
-    icon: <Code className='w-6 h-6' />,
-    category: 'Frontend',
-    technologies: [
-      'TypeScript',
-      'JavaScript ES6+',
-      'HTML5',
-      'CSS3',
-      'TailwindCSS',
-    ],
-  },
-  {
     name: 'UI Frameworks & Libraries',
     percentage: 88,
-    icon: <Palette className='w-6 h-6' />,
+    icon: <Palette className="w-6 h-6" />,
     category: 'Frontend',
-    technologies: [
-      'Ant Design',
-      'Shadcn/ui',
-      'Bootstrap',
-      'TailwindCSS',
-      'i18n',
-      'Chart.js',
-    ],
+    technologies: ['Ant Design', 'Shadcn/ui', 'Bootstrap', 'TailwindCSS', 'i18n', 'Chart.js'],
   },
   {
     name: 'Backend Development',
     percentage: 88,
-    icon: <Server className='w-6 h-6' />,
+    icon: <Server className="w-6 h-6" />,
     category: 'Backend',
-    technologies: [
-      'Node.js',
-      'Express.js',
-      'REST APIs',
-      'Socket.io',
-      'MySQL',
-      'MongoDB',
-    ],
+    technologies: ['Node.js', 'Express.js', 'REST APIs', 'Socket.io', 'MySQL', 'MongoDB'],
   },
   {
     name: 'AI & Cloud Services',
     percentage: 80,
-    icon: <Brain className='w-6 h-6' />,
+    icon: <Brain className="w-6 h-6" />,
     category: 'Backend',
-    technologies: [
-      'AWS Bedrock',
-      'Qdrant',
-      'Python',
-      'DigitalOcean',
-      'Cloudinary',
-      'PayOS',
-    ],
+    technologies: ['AWS Bedrock', 'Qdrant', 'Python', 'DigitalOcean', 'Cloudinary', 'PayOS'],
   },
   {
     name: 'Mobile Development',
     percentage: 88,
-    icon: <Smartphone className='w-6 h-6' />,
+    icon: <Smartphone className="w-6 h-6" />,
     category: 'Mobile',
     technologies: [
       'React Native',
@@ -96,23 +52,9 @@ export const SKILLS = [
     ],
   },
   {
-    name: 'Mobile Services',
-    percentage: 85,
-    icon: <Smartphone className='w-6 h-6' />,
-    category: 'Mobile',
-    technologies: [
-      'Google Maps SDK',
-      'Firebase Auth',
-      'Firebase Storage',
-      'FCM',
-      'Push Notifications',
-      'Sentry',
-    ],
-  },
-  {
     name: 'State Management & Query',
     percentage: 85,
-    icon: <Database className='w-6 h-6' />,
+    icon: <Database className="w-6 h-6" />,
     category: 'Frontend',
     technologies: [
       'TanStack Query',
@@ -126,28 +68,15 @@ export const SKILLS = [
   {
     name: 'DevOps & Tools',
     percentage: 82,
-    icon: <Settings className='w-6 h-6' />,
+    icon: <Settings className="w-6 h-6" />,
     category: 'Tools',
-    technologies: [
-      'Docker',
-      'Git',
-      'GitHub Actions',
-      'Supabase',
-      'Firebase',
-      'Sentry',
-      'Jest',
-    ],
+    technologies: ['Docker', 'Git', 'GitHub Actions', 'Supabase', 'Firebase', 'Sentry', 'Jest'],
   },
   {
     name: 'Design & Workflow',
     percentage: 80,
-    icon: <Palette className='w-6 h-6' />,
+    icon: <Palette className="w-6 h-6" />,
     category: 'Tools',
-    technologies: [
-      'Figma',
-      'Agile/Scrum',
-      'Jira',
-      'Accessibility (A11y)',
-    ],
+    technologies: ['Figma', 'Agile/Scrum', 'Jira', 'Accessibility (A11y)'],
   },
 ];
